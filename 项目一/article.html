@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            grid-template-rows: 300px 1000px;
+            grid-template-areas: "head head head"
+                                 ". main nav";
+        }
+        .head{
+            color: white;
+            grid-area: head;
+            background-image:url("./img/background.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: grid;
+            grid-template-columns: 20% 60% 20%;
+            grid-template-areas: ". center .";
+        }
+        .head-center{
+            grid-area: center;
+            display: flex;
+            flex-direction: column;
+            font-family:'Courier New', Courier, monospace
+        }
+        .head-center p{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            grid-area: main;
+        }
+        .nav,
+        .nav a{
+            grid-area: nav;
+            color:rgb(128,128,128);
+            text-decoration: none;
+        }
+        .title{
+            font-weight: 700;
+            text-indent: 2em;
+            font-family:cursive;
+        }
+        .introduce{
+            font-size: 80%;
+            font-family:fantasy;
+            text-indent: 2em;
+            color:rgb(0, 56, 56);
+            
+            
+        }
+        .main a{
+            text-decoration: none;
+            color: rgb(21, 125, 160);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <div class="head-center">
+                <h1 style="font-size: 60px;">Data Of Machine Learning</h1>
+                <p><strong><em>/windows</em></strong></p>
+                <p><strong><em>data:2020/2/27</em></strong></p>
+                <p><strong><em>阅读量:101</em></strong></p>
+            </div>
+        </div>
+        <div class="main">
+            
+            <p class="title">《Brief History of Machine Learning》</p>
+
+            <p class="introduce">介绍:这是一篇介绍机器学习历史的文章，介绍很全面，从感知机、神经网络、决策树、SVM、Adaboost到随机森林、Deep Learning.</p>
+            
+            <p class="title">《Deep Learning in Neural Networks: An Overview》</p>
+            
+            <p class="introduce">介绍:这是瑞士人工智能实验室Jurgen Schmidhuber写的最新版本《神经网络与深度学习综述》本综述的特点是以时间排序，从1940年开始讲起，到60-80年代，80-90年代，一直讲到2000年后及最近几年的进展。涵盖了deep learning里各种tricks，引用非常全面.</p>
+            
+            <p class="title">《A Gentle Introduction to Scikit-Learn: A Python Machine Learning Library》</p>
+            
+            <p class="introduce">介绍:这是一份python机器学习库,如果您是一位python工程师而且想深入的学习机器学习.那么这篇文章或许能够帮助到你.</p>
+            
+            <p class="title">《How to Layout and Manage Your Machine Learning Project》</p>
+            
+            <p class="introduce">介绍:这一篇介绍如果设计和管理属于你自己的机器学习项目的文章，里面提供了管理模版、数据管理与实践方法.</p>
+            
+            <p class="title">《Machine Learning is Fun!》</p>
+            
+            <p class="introduce">介绍:如果你还不知道什么是机器学习，或则是刚刚学习感觉到很枯燥乏味。那么推荐一读。这篇文章已经被翻译成中文,如果有兴趣可以移步《有趣的机器学习：最简明入门指南》</p>
+            
+            <p class="title">《R语言参考卡片》</p>
+            
+            <p class="introduce">介绍:R语言是机器学习的主要语言,有很多的朋友想学习R语言，但是总是忘记一些函数与关键字的含义。那么这篇文章或许能够帮助到你</p>
+            
+            <p class="title">《Choosing a Machine Learning Classifier》</p>
+            
+            <p class="introduce">介绍:我该如何选择机器学习算法，这篇文章比较直观的比较了Naive Bayes，Logistic Regression，SVM，决策树等方法的优劣，另外讨论了样本大小、Feature与Model权衡等问题。此外还有已经翻译了的版本:<a href="http://www.52ml.net/15063.html">http://www.52ml.net/15063.html</a></p>
+            
+            <p class="title">《An Introduction to Deep Learning: From Perceptrons to Deep Networks》</p>
+            
+            <p class="introduce">介绍：深度学习概述：从感知机到深度网络，作者对于例子的选择、理论的介绍都很到位，由浅入深。翻译版本：<a href="http://www.cnblogs.com/xiaowanyer/p/3701944.html">http://www.cnblogs.com/xiaowanyer/p/3701944.html</a></p>
+            
+            <p class="title">《The LION Way: Machine Learning plus Intelligent Optimization》</p>
+            
+            <p class="introduce">介绍:<机器学习与优化>这是一本机器学习的小册子, 短短300多页道尽机器学习的方方面面. 图文并茂, 生动易懂, 没有一坨坨公式的烦恼. 适合新手入门打基础, 也适合老手温故而知新. 比起MLAPP/PRML等大部头, 也许这本你更需要!具体内容推荐阅读:<a href="http://intelligent-optimization.org/LIONbook/">http://intelligent-optimization.org/LIONbook/</a></p>
+            
+            <p class="title">《深度学习与统计学习理论》</p>
+            
+            <p class="introduce">介绍:作者是来自百度，不过他本人已经在2014年4月份申请离职了。但是这篇文章很不错如果你不知道深度学习与支持向量机/统计学习理论有什么联系？那么应该立即看看这篇文章.</p>
+        
+            <p class="title">《计算机科学中的数学》</p>
+                    
+            <p class="introduce">介绍:这本书是由谷歌公司和MIT共同出品的计算机科学中的数学：Mathematics for Computer Science，Eric Lehman et al 2013 。分为5大部分：1）证明，归纳。2）结构，数论，图。3）计数，求和，生成函数。4）概率，随机行走。5）递归。等等</p>
+                    
+            <p class="title">《数据科学入门》</p>
+                    
+            <p class="introduce">介绍:这是一本由雪城大学新编的第二版《数据科学入门》教材：偏实用型，浅显易懂，适合想学习R语言的同学选读。</p>
+                    
+            <p class="title">《Twenty Questions for Donald Knuth》</p>
+                    
+            <p class="introduce">介绍:这并不是一篇文档或书籍。这是篇向图灵奖得主Donald Knuth提问记录稿： 近日， Charles Leiserson, Al Aho, Jon Bentley等大神向Knuth提出了20个问题，内容包括TAOCP，P/NP问题，图灵机，逻辑，以及为什么大神不用电邮等等。</p>
+                    
+            <p class="title">《Automatic Construction and Natural-Language Description of Nonparametric Regression Models》</p>
+                    
+            <p class="introduce">介绍：不会统计怎么办？不知道如何选择合适的统计模型怎么办？那这篇文章你的好好读一读了麻省理工Joshua B. Tenenbaum和剑桥Zoubin Ghahramani合作，写了一篇关于automatic statistician的文章。可以自动选择回归模型类别，还能自动写报告...</p>
+                    
+            <p class="title">《ICLR 2014论文集》</p>
+                    
+            <p class="introduce">介绍:对深度学习和representation learning最新进展有兴趣的同学可以了解一下</p>
+                    
+            <p class="title">《Introduction to Information Retrieval》</p>
+                    
+            <p class="introduce">介绍：这是一本信息检索相关的书籍，是由斯坦福Manning与谷歌副总裁Raghavan等合著的Introduction to Information Retrieval一直是北美最受欢迎的信息检索教材之一。最近作者增加了该课程的幻灯片和作业。IR相关资源：<a href="http://www-nlp.stanford.edu/IR-book/information-retrieval.html">http://www-nlp.stanford.edu/IR-book/information-retrieval.html</a></p>
+                    
+            <p class="title">《Machine learning in 10 pictures》</p>
+                    
+            <p class="introduce"> 介绍:Deniz Yuret用10张漂亮的图来解释机器学习重要概念：1. Bias/Variance Tradeoff 2. Overfitting 3. Bayesian / Occam's razor 4. Feature combination 5. Irrelevant feature 6. Basis function 7. Discriminative / Generative 8. Loss function 9. Least squares 10. Sparsity.很清晰</p>
+                    
+            <p class="title">《雅虎研究院的数据集汇总》</p>
+                    
+            <p class="introduce">介绍：雅虎研究院的数据集汇总： 包括语言类数据，图与社交类数据，评分与分类数据，计算广告学数据，图像数据，竞赛数据，以及系统类的数据。</p>
+                    
+            <p class="title">《An Introduction to Statistical Learning with Applications in R》</p>
+                    
+            <p class="introduce"> 介绍：这是一本斯坦福统计学著名教授Trevor Hastie和Robert Tibshirani的新书，并且在2014年一月已经开课：<a href="https://class.stanford.edu/courses/HumanitiesScience/StatLearning/Winter2014/about">https://class.stanford.edu/courses/HumanitiesScience/StatLearning/Winter2014/about</a></p>
+                    
+            <p class="title"> Best Machine Learning Resources for Getting Started</p>
+                    
+            <p class="introduce"> 介绍：机器学习最佳入门学习资料汇总是专为机器学习初学者推荐的优质学习资源，帮助初学者快速入门。而且这篇文章的介绍已经被翻译成中文版。如果你不怎么熟悉，那么我建议你先看一看中文的介绍。</p>
+                    
+            <p class="title"> My deep learning reading list</p>
+                    
+            <p class="introduce">介绍:主要是顺着Bengio的PAMI review的文章找出来的。包括几本综述文章，将近100篇论文，各位山头们的Presentation。全部都可以在google上找到。</p>
+                    
+            <p class="title"> Cross-Language Information Retrieval</p>
+                    
+            <p class="introduce">介绍：这是一本书籍，主要介绍的是跨语言信息检索方面的知识。理论很多</p>
+                    
+            <p class="title"> 探索推荐引擎内部的秘密，第 1 部分: 推荐引擎初探</p>
+                    
+            <p class="introduce">介绍:本文共有三个系列，作者是来自IBM的工程师。它主要介绍了推荐引擎相关算法，并帮助读者高效的实现这些算法。探索推荐引擎内部的秘密，第 2 部分: 深度推荐引擎相关算法 - 协同过滤,探索推荐引擎内部的秘密，第 3 部分: 深度推荐引擎相关算法 - 聚类</p>
+                    
+            <p class="title">《Advice for students of machine learning》</p>
+                    
+            <p class="introduce">介绍：康奈尔大学信息科学系助理教授David Mimno写的《对机器学习初学者的一点建议》， 写的挺实际，强调实践与理论结合，最后还引用了冯 • 诺依曼的名言: "Young man, in mathematics you don't understand things. You just get used to them."</p>
+                    
+            <p class="title"> 分布式并行处理的数据</p>
+                    
+            <p class="introduce">介绍：这是一本关于分布式并行处理的数据《Explorations in Parallel Distributed Processing: A Handbook of Models, Programs, and Exercises》,作者是斯坦福的James L. McClelland。着重介绍了各种神级网络算法的分布式实现,做Distributed Deep Learning 的童鞋可以参考下</p>
+                    
+            <p class="title">《“机器学习”是什么？》</p>
+                    
+            <p class="introduce">介绍:【“机器学习”是什么？】John Platt是微软研究院杰出科学家，17年来他一直在机器学习领域耕耘。近年来机器学习变得炙手可热，Platt和同事们遂决定开设博客，向公众介绍机器学习的研究进展。机器学习是什么，被应用在哪里？来看Platt的这篇博文</p>
+                    
+            <p class="title">《2014年国际机器学习大会ICML 2014 论文》</p>
+                    
+            <p class="introduce">介绍：2014年国际机器学习大会（ICML）已经于6月21-26日在国家会议中心隆重举办。本次大会由微软亚洲研究院和清华大学联手主办，是这个有着30多年历史并享誉世界的机器学习领域的盛会首次来到中国，已成功吸引海内外1200多位学者的报名参与。干货很多，值得深入学习下<p>
+                    
+            <p class="title">《Machine Learning for Industry: A Case Study》</p>
+                    
+            <p class="introduce">介绍：这篇文章主要是以Learning to Rank为例说明企业界机器学习的具体应用，RankNet对NDCG之类不敏感，加入NDCG因素后变成了LambdaRank，同样的思想从神经网络改为应用到Boosted Tree模型就成就了LambdaMART。Chirs Burges，微软的机器学习大神，Yahoo 2010 Learning to Rank Challenge第一名得主，排序模型方面有RankNet，LambdaRank，LambdaMART，尤其以LambdaMART最为突出，代表论文为：From RankNet to LambdaRank to LambdaMART: An Overview此外，Burges还有很多有名的代表作，比如：A Tutorial on Support Vector Machines for Pattern Recognition</p>
+                    
+            <p class="title"> 100 Best GitHub: Deep Learning</p>
+                    
+            <p class="introduce"> 介绍:100 Best GitHub: Deep Learning</p>
+                    
+            <p class="title">《UFLDL-斯坦福大学Andrew Ng教授“Deep Learning”教程》</p>
+                    
+            <p class="introduce">介绍:本教程将阐述无监督特征学习和深度学习的主要观点。通过学习，你也将实现多个功能学习/深度学习算法，能看到它们为你工作，并学习如何应用/适应这些想法到新问题上。本教程假定机器学习的基本知识（特别是熟悉的监督学习，逻辑回归，梯度下降的想法），如果你不熟悉这些想法，我们建议你去这里机器学习课程，并先完成第II，III，IV章（到逻辑回归）。此外这关于这套教程的源代码在github上面已经有python版本了UFLDL Tutorial Code</p>
+                    
+            <p class="title"> *《Deep Learning for Natural Language Processing and Related Applications》</p>
+                    
+            <p class="introduce">  介绍:这份文档来自微软研究院,精髓很多。如果需要完全理解，需要一定的机器学习基础。不过有些地方会让人眼前一亮,毛塞顿开。</p>
+                    
+            <p class="title"> Convolutions</p>
+                    
+            <p class="introduce"> 介绍:这是一篇介绍图像卷积运算的文章，讲的已经算比较详细的了</p>
+                    
+            <p class="title">《Machine Learning Summer School》</p>
+                    
+            <p class="introduce">介绍：每天请一个大牛来讲座，主要涉及机器学习，大数据分析，并行计算以及人脑研究。<a href="https://www.youtube.com/user/smolix">https://www.youtube.com/user/smolix</a>（需翻墙）</p>
+                    
+            <p class="title">《Awesome Machine Learning》</p>
+                    
+            <p class="introduce">介绍：一个超级完整的机器学习开源库总结，如果你认为这个碉堡了，那后面这个列表会更让你惊讶：【Awesome Awesomeness】,国内已经有热心的朋友进行了翻译中文介绍</p>
+                    
+            <p class="title"> 斯坦福《自然语言处理》课程视频</p>
+                    
+            <p class="introduce">介绍:ACL候任主席、斯坦福大学计算机系Chris Manning教授的《自然语言处理》课程所有视频已经可以在斯坦福公开课网站上观看了（如Chrome不行，可用IE观看） 作业与测验也可以下载。</p>
+                    
+            <p class="introduce">《Deep Learning and Shallow Learning》</p>
+                    
+            <p class="introduce">介绍:对比 Deep Learning 和 Shallow Learning 的好文，来着浙大毕业、MIT 读博的 Chiyuan Zhang 的博客。</p>
+                    
+            <p class="title">《Recommending music on Spotify with deep learning》</p>
+                    
+            <p class="introduce">介绍:利用卷积神经网络做音乐推荐。</p>
+        
+        </div>
+        <div class="nav">
+            <h1>CATALOG</h1>
+            <ul>
+                <li><a href="">导航一</a></li>
+                <li><a href="">导航二</a></li>
+                <li><a href="">导航三</a></li>
+                <li><a href="">导航四</a></li>
+                <li><a href="">导航五</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
