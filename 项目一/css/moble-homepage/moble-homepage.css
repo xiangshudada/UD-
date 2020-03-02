@@ -1,0 +1,148 @@
+@media(max-width:879px){
+    .container{
+        display: grid;
+        grid-template-rows: 200px 300px 250px 400px 250px 400px 250px 10px;
+        grid-template-columns: 80% 20%;
+        grid-template-areas: "nav nav"
+                            "photo1 photo1"
+                            "blog1 abou1"
+                            "photo2 photo2"
+                            "blog2 about2"
+                            "photo3 photo3"
+                            "blog3 about3"
+                            "ft ft";
+    }
+    #foot{
+        grid: ft;
+        background: mintcream;
+        text-align: center;
+    }
+    #nav{
+        grid-area: nav;
+        display: grid;
+        grid-template-rows: 70% 30%;
+        grid-template-columns: 30% 70%;
+        background:url("../../img/moble-background2.png") no-repeat ;
+        /* /* background-repeat: no-repeat; */
+        background-size: 100% auto; 
+        border-radius: 15px;
+    }
+    #nav #logo{
+        grid-area: 1/1/2/2;
+    }
+    #name{
+        font-size: 50px;
+        color: lightyellow;
+    }
+    #nav #subNav{
+        grid-area: 2/2/3/3;
+    }
+    #nav #subNav .book{
+        text-decoration: none;
+        color:lightpink;
+        padding: 10px;
+    }
+    #nav #subNav #book1{
+        grid-area: book1;
+    }
+    #nav #subNav #book2{
+        grid-area: book2;
+    }
+    #nav #subNav #book3{
+        grid-area: book3;
+    }
+    #nav #subNav #book4{
+        grid-area: book4;
+    }
+    #nav #subNav #book5{
+        grid-area: book5;
+    }
+    #nav #subNav #book6{
+        grid-area: book6;
+    }
+    #nav #subNav #book7{
+        grid-area: book7;
+    }
+
+    #photo1{
+        grid-area: photo1;
+        background: url("../../img/img1.jpg") no-repeat ;
+        /* background-repeat: no-repeat; */
+        background-size: 100% auto; 
+
+    }
+    #photo2{
+        grid-area: photo2;
+        background: url("../../img/猫抓.jpg") no-repeat ;
+        background-size: 100% auto;
+        /* background-repeat: no-repeat;  */
+    }
+    #photo3{
+        grid-area: photo3;
+        background: url("../../img/joker.jpg") no-repeat ;
+         /* background-repeat: no-repeat; */
+        background-size: 100% ; 
+    }
+    #blog1{
+        grid-area: blog1;
+    }
+    #blog2{
+        grid-area: blog2;
+    }
+    #blog3{
+        grid-area: blog3;
+    }
+    #blog1{
+        grid-area: blog1;
+    }
+    #blog2{
+        grid-area: blog2;
+    }
+    #blog3{
+        grid-area: blog3;
+    }
+    .blog{
+        margin: 5px;
+        border-radius: 15px;
+        padding: 5px;
+        background: linen;
+    }
+    .blog p{
+        text-indent: 2em;
+        color: rgb(128,128,128);
+        font-size: 16px;
+        line-height: 20px;
+        padding: 0;
+        hyphens: auto;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    .blog .title{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: 700;
+    }
+    .blog a{
+        color: rgb(128,128,128);
+        font-size: 16px;
+        line-height: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-decoration: none;
+    }
+    .photo{
+        margin: 5px;
+        border-radius: 15px;
+    }
+    .about{
+        padding: 6px;
+        margin: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 15px;
+        background: lightgoldenrodyellow;
+    }
+    .about p{
+        word-wrap: break-word;
+        overflow: hidden;
+        margin-top: 10%;
+    }
+}

@@ -1,0 +1,19 @@
+
+.head-center p{
+    margin: 0;
+    padding: 0;
+}
+.title{
+    font-weight: 700;
+    font-style: italic;
+    text-indent: 2em;
+    font-family:cursive;
+}
+.introduce{
+    font-size: 90%;
+    text-indent: 2em;
+    color:rgb(0, 56, 56);
+}
+.main a{
+    color: rgb(21, 125, 160);
+}

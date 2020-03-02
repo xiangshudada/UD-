@@ -1,3 +1,9 @@
+#subNav,
+.blog,
+.about{
+    word-wrap: break-word;
+    overflow: hidden;
+}
 .container{
     display: grid;
     grid-template-columns: 20% 30% 30% 20%;
@@ -8,7 +14,9 @@
                         "ft ft ft ft";
                 
 }
-.card{
+.blog,
+.photo,
+.about{
     border: 1px solid rgb(128,128,128);
     padding: 20px;
 }
@@ -30,7 +38,7 @@
     justify-content: start;
     align-items: center;
     grid-area: logo;
-    font-size: 100px;
+    font-size: 20px;
 }
 #subNav{
     display: flex;
@@ -48,7 +56,7 @@
 #photo1{
     grid-area: photo1;
     
-    background-image: url("../img/img1.jpg");
+    background-image: url("../../img/img1.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -65,7 +73,7 @@
 #photo2{
     grid-area: photo2;
     background:black;
-    background-image: url("../img/猫抓.jpg");
+    background-image: url("../../img/猫抓.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -82,7 +90,7 @@
 #photo3{
     grid-area: photo3;
     background-color: black;
-    background-image: url("../img/joker.jpg");
+    background-image: url("../../img/joker.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -108,11 +116,12 @@
     hyphens: auto;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
-.card .title{
+.blog .title{
     margin: 0%;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
     }
-.card a {
+.blog a {
     color: rgb(128,128,128);
     font-size: 12px;
     line-height: 20px;
@@ -136,4 +145,7 @@ p{
 #foot{
     grid-area: ft;
     background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 30px;
 }
