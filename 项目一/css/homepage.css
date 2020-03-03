@@ -34,11 +34,25 @@
 }
 #logo{
     display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items:center;
     grid-area: logo;
+    background: rgb(162, 219, 255);
+    border-radius: 10%;
+}
+#logo h1{
     font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+#logo p{
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+#logo img{
+    width: 50%;
 }
 #subNav{
     display: flex;
@@ -56,7 +70,7 @@
 #photo1{
     grid-area: photo1;
     
-    background-image: url("../../img/img1.jpg");
+    background-image: url("../img/img1.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -73,7 +87,7 @@
 #photo2{
     grid-area: photo2;
     background:black;
-    background-image: url("../../img/猫抓.jpg");
+    background-image: url("../img/猫抓.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -90,7 +104,7 @@
 #photo3{
     grid-area: photo3;
     background-color: black;
-    background-image: url("../../img/joker.jpg");
+    background-image: url("../img/joker.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -112,6 +126,7 @@
     color: rgb(128,128,128);
     font-size: 12px;
     line-height: 20px;
+    text-decoration: underline;
     padding: 0;
     hyphens: auto;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
