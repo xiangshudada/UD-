@@ -42,6 +42,7 @@ buildNav = function(){
     re.style.margin='20px'
     re.style.fontWeight='700'
     re.setAttribute('id','returnTop')
+    re.style.display = 'none'
     re.textContent = 'TOP'
     ul.appendChild(re)
     //section1
@@ -196,12 +197,23 @@ navTop.addEventListener('click',function(){
     scrollToTop()
 })
 // Set sections as active and hide menu
+let test1=setTimeout(function(){
+    ul.style.display='none'
+},3000)
 window.onscroll = function(){
+    window.clearTimeout(test1)
     ul.style.display=''
     chooseAvtive()
-    setTimeout(function(){
+    if(window.scrollY + this.document.documentElement.clientHeight >= this.document.documentElement.offsetHeight-100){
+        navTop.style.display=''
+    }
+    else{
+        navTop.style.display='none'
+    }
+    let test2=setTimeout(function(){
         ul.style.display='none'
-    },6000)
+    },3000)
+    test1=test2
 }
 //
 
