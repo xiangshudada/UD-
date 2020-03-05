@@ -1,0 +1,6 @@
+@import './common-homepage.css';
+@import './homepage.css'(min-width: 879px);
+@import './mobile-homepage.css';
+@import 'https://fonts.googleapis.com/css?family=Montserrat&display=swap';
+@import 'https://daneden.github.io/animate.css/animate.min.css';
+

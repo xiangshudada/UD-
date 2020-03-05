@@ -37,6 +37,13 @@ let section = document.querySelectorAll("section")
 
 // build the nav 
 buildNav = function(){
+    const re = document.createElement('li')
+    re.style.color='black'
+    re.style.margin='20px'
+    re.style.fontWeight='700'
+    re.setAttribute('id','returnTop')
+    re.textContent = 'TOP'
+    ul.appendChild(re)
     //section1
     let tag0 = section[0].getElementsByTagName('h2')
     let content0 = tag0[0].textContent
@@ -68,32 +75,74 @@ buildNav = function(){
     li2.setAttribute('id','nav-section3')
     li2.textContent=content2
     ul.appendChild(li2)
+    //section4
+    let tag3 = section[3].getElementsByTagName('h2')
+    let content3 = tag3[0].textContent
+    const li3 = document.createElement('li')
+    li3.style.color='black'
+    li3.style.margin='20px'
+    li3.style.fontWeight='700'
+    li3.setAttribute('id','nav-section4')
+    li3.textContent=content3
+    ul.appendChild(li3)
 
 }
 
 // Add class 'active' to section when near top of viewport
 chooseAvtive=function(){
     let top = window.scrollY  + window.screen.availHeight/2
-    console.log(top)
+    let listLi = ul.getElementsByTagName('li')
     if (top >section[0].offsetTop && top <section[0].offsetHeight + section[0].offsetTop ){
         section[0].classList.add('your-active-class')
         section[1].classList.remove('your-active-class')
         section[2].classList.remove('your-active-class')
+        section[3].classList.remove('your-active-class')
+        listLi[1].style.background='lightblue'
+        listLi[2].style.background=''
+        listLi[3].style.background=''
+        listLi[4].style.background=''
+
+
     }
     else if(top >section[1].offsetTop && top <section[1].offsetHeight + section[1].offsetTop){
         section[0].classList.remove('your-active-class')
         section[1].classList.add('your-active-class')
         section[2].classList.remove('your-active-class')
+        section[3].classList.remove('your-active-class')
+        listLi[1].style.background=''
+        listLi[2].style.background='lightblue'
+        listLi[3].style.background=''
+        listLi[4].style.background=''
     }
     else if(top >section[2].offsetTop && top <section[2].offsetHeight + section[2].offsetTop ){
         section[0].classList.remove('your-active-class')
         section[1].classList.remove('your-active-class')
         section[2].classList.add('your-active-class')
+        section[3].classList.remove('your-active-class')
+        listLi[1].style.background=''
+        listLi[2].style.background=''
+        listLi[3].style.background='lightblue'
+        listLi[4].style.background=''
+    }
+    else if(top >section[3].offsetTop && top <section[3].offsetHeight + section[3].offsetTop ){
+        section[0].classList.remove('your-active-class')
+        section[1].classList.remove('your-active-class')
+        section[2].classList.remove('your-active-class')
+        section[3].classList.add('your-active-class')
+        listLi[1].style.background=''
+        listLi[2].style.background=''
+        listLi[3].style.background=''
+        listLi[4].style.background='lightblue'
     }
     else{
         section[0].classList.remove('your-active-class')
         section[1].classList.remove('your-active-class')
         section[2].classList.remove('your-active-class')
+        section[3].classList.remove('your-active-class')
+        listLi[1].style.border=''
+        listLi[2].style.border=''
+        listLi[3].style.border=''
+        listLi[4].style.border=''
     }
 }
 
@@ -106,6 +155,14 @@ scrollToSection2=function(){
 }
 scrollToSection3=function(){
     window.location.href = "#section3";
+}
+scrollToSection4=function(){
+    window.location.href = "#section4";
+}
+scrollToTop=function(){
+   
+    window.scrollTo(0,0)
+    
 }
 
 /**
@@ -121,6 +178,8 @@ buildNav()
 const navSection1 = document.getElementById('nav-section1')
 const navSection2 = document.getElementById('nav-section2')
 const navSection3 = document.getElementById('nav-section3')
+const navSection4 = document.getElementById('nav-section4')
+const navTop = document.getElementById('returnTop')
 navSection1.addEventListener('click',function(){
     scrollToSection1()
 })
@@ -130,8 +189,19 @@ navSection2.addEventListener('click',function(){
 navSection3.addEventListener('click',function(){
     scrollToSection3()
 })
-// Set sections as active
+navSection4.addEventListener('click',function(){
+    scrollToSection4()
+})
+navTop.addEventListener('click',function(){
+    scrollToTop()
+})
+// Set sections as active and hide menu
 window.onscroll = function(){
+    ul.style.display=''
     chooseAvtive()
+    setTimeout(function(){
+        ul.style.display='none'
+    },6000)
 }
+//
 
